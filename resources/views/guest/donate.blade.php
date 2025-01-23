@@ -31,6 +31,7 @@
                 </a>
             </div>
         @endif
+
     @empty
         {{ __('bank_account.empty') }}
     @endforelse

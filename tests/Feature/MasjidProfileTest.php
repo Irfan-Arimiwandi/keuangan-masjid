@@ -26,7 +26,7 @@ class MasjidProfileTest extends TestCase
         $this->visitRoute('masjid_profile.edit');
 
         $this->submitForm(__('masjid_profile.update'), [
-            'masjid_name' => 'Masjid Ar-Rahman',
+            'masjid_name' => 'Masjid Jami Al Akhyar',
             'masjid_address' => 'Jln. Kalimantan, No. 20, Kota Banjarmasin',
             'masjid_city_name' => 'Banjarmasin',
             'masjid_google_maps_link' => 'https://maps.app.goo.gl/abcd',

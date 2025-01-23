@@ -26,13 +26,20 @@
 <body>
     <div class="container-fluid">
         <header class="py-5 text-center">
-            @if (Setting::get('masjid_logo_path'))
-                <div class="mb-4"><img src="{{ Storage::url(Setting::get('masjid_logo_path'))}}" style="width: 150px"></div>
-            @endif
+            <div class="mb-3">
+            <img src="{{ asset('images/logo.png') }}" style="width: 150px">
+            </div>
             <a class="h1 text-dark" href="{{ url('/') }}">{{ Setting::get('masjid_name', config('masjid.name')) }}</a>
             @if (Setting::get('masjid_address'))
-            <div class="mt-4">{!! nl2br(htmlentities(Setting::get('masjid_address'))) !!}</div>
+            <div class="mt-4">
+            <p class="mb-1">{!! nl2br(htmlentities(Setting::get('masjid_address'))) !!}</p>
+            <p class="mb-0">{{ __('Website:') }} <a href="{{ url('/') }}" class="text-primary">{{ url('/') }}</a></p>
+            <p class="mb-0">{{ __('Laporan Keuangan:') }} <a href="{{ route('public_reports.index') }}" class="text-primary">{{ __('Klik di sini') }}</a></p>
+            </div>
             @endif
+            <div class="mt-4">
+            <p class="mb-0">{{ __('Untuk informasi lebih lanjut mengenai laporan keuangan, silakan kunjungi halaman laporan keuangan kami.') }}</p>
+            </div>
         </header>
     </div>
     <div class="navbar-light bg-white shadow-sm mb-4">

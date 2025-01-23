@@ -1,11 +1,6 @@
-<div class="page-header">
-    <h3 class="page-title">{{ __('report.summary_weekly') }}</h3>
-    <div class="page-options d-flex">
-        @if ($bookVisibility == 'public')
-            <a class="btn btn-sm btn-success" href="{{ route('public_reports.finance.detailed') }}" role="button">{{ __('app.show') }}</a>
-        @endif
-    </div>
-</div>
+{{-- <div class="page-header">
+</div> --}}
+{{-- <h5 class="">{{ __('report.summary_weekly') }}</h5> --}}
 <div class="card mb-0">
     <table class="table table-sm mb-0">
         <tbody>
@@ -43,4 +38,9 @@
             </tr>
         </tbody>
     </table>
+</div>
+<div class="page-options d-flex mt-5">
+    @if ($bookVisibility == 'public')
+        <a class="btn btn-sm btn-success" href="{{ route('public_reports.finance.detailed') }}" role="button">{{ __('app.show') }}</a>
+    @endif
 </div>

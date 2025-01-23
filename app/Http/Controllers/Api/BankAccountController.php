@@ -32,7 +32,7 @@ class BankAccountController extends Controller
         $imageBase64 = base64_decode($imageParts[1]);
         $imageName = uniqid().'.webp';
 
-        Storage::put($imageName, $imageBase64);
+        Storage::put('public/' .$imageName, $imageBase64);
         Setting::for($bankAccount)->set('qris_image_path', $imageName);
 
         return response()->json([

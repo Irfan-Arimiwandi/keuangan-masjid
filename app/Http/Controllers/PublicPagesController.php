@@ -12,4 +12,12 @@ class PublicPagesController extends Controller
 
         return view('guest.donate', compact('bankAccounts'));
     }
+
+    public function index()
+    {
+        $bankAccounts = BankAccount::where('is_active', BankAccount::STATUS_ACTIVE)->get();
+
+        return view('guest.welcome', compact('bankAccounts'));
+    }
+
 }
