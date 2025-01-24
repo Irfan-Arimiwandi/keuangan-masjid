@@ -56,6 +56,7 @@ class LecturingController extends Controller
 
     public function store(CreateRequest $lecturingCreateForm)
     {
+        // dd($lecturingCreateForm);   
         $lecturing = $lecturingCreateForm->save();
         flash(__('lecturing.created'), 'success');
 

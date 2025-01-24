@@ -29,7 +29,7 @@
     <div class="page-header mb-4">
         <h2 class="page-title">{{ __('lecturing.audience_'.$audienceCode) }}</h2>
     </div>
-
+    
     @desktop
         @include('lecturings._'.$audienceCode)
     @elsedesktop
@@ -42,7 +42,6 @@
         @endif
     @enddesktop
 @endforeach
-
 @foreach ($occasionalScheduleAudiences as $audienceCode => $audience)
     @if (isset($lecturings[$audienceCode]))
         <div class="page-header mb-4">
@@ -57,5 +56,18 @@
         @enddesktop
     @endif
 @endforeach
-
+@foreach ($occasionalScheduleAudiences as $audienceCode => $audience)
+    @if (isset($lecturings[$audienceCode]))
+        <div class="page-header mb-4">
+            <h2 class="page-title">{{ __('lecturing.audience_'.$audienceCode) }}</h2>
+        </div>
+        @desktop
+            @include('lecturings._'.$audienceCode)
+        @elsedesktop
+            @foreach($lecturings[$audienceCode] as $lecturing)
+                @include('lecturings._single_'.$audienceCode)
+            @endforeach
+        @enddesktop
+    @endif
+@endforeach
 @endsection

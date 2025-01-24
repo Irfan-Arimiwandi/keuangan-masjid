@@ -6,12 +6,16 @@
 <div class="row justify-content-center mt-4">
     <div class="col-md-7">
         <div class="card">
+            
             <div class="card-header">{{ __('lecturing.create') }}</div>
             @if ($originalLecturing)
                 {{ Form::model($originalLecturing, ['route' => 'lecturings.store']) }}
             @else
                 {{ Form::open(['route' => 'lecturings.store']) }}
             @endif
+            @php
+                // dd($audienceCodes);
+            @endphp
             <div class="card-body">
                 {!! FormField::radios('audience_code', $audienceCodes, [
                     'required' => true,

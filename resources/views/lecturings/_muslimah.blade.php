@@ -7,8 +7,8 @@
                 <th class="text-center col-2">{{ __('time.date') }}</th>
                 <th class="col-3">{{ __('lecturing.time') }}</th>
                 <th class="col-3">{{ __('lecturing.lecturer_name') }}</th>
-                <th class="col-3">{{ __('lecturing.book_link') }}</th>
                 <th class="col-4">{{ __('lecturing.description') }}</th>
+                <th class="col-3">{{ __('lecturing.book_link') }}</th>
                 <th class="text-center col-3">{{ __('app.action') }}</th>
             </tr>
         </thead>
@@ -24,8 +24,8 @@
                         {{ $lecturing->time }}
                     </td>
                     <td>{{ $lecturing->lecturer_name }}</td>
-                    <td>{{ $lecturting->description }}</td>
-                    <td>{{ $lecturting->book_link }}</td>
+                    <td>{{ $lecturing->description ?? ''}}</td>
+                    <td>{{ $lecturing->book_link }}</td>
                     <td class="text-center">
                         @can('view', $lecturing)
                             {{ link_to_route(

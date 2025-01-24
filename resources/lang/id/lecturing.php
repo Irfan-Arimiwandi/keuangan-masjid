@@ -41,10 +41,10 @@ return [
 
     // Attributes
     'audience' => 'Untuk Jadwal',
-    // 'audience_friday' => 'Jumat',
-    'audience_public' => 'Renovasi dan pembangunan',
-    'audience_muslimah' => 'Lain lain',
-    'audience_tarawih' => 'Pembelian Alat',
+    'audience_friday' => 'Jumat',
+    'audience_public' => 'Renovasi',
+    'audience_muslimah' => 'Pembangunan',
+    'audience_tarawih' => 'Lain-lain',
     'date' => 'Tanggal',
     'time' => 'Jam',
     'start_time' => 'Jam Mulai',

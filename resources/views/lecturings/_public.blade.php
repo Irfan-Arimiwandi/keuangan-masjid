@@ -24,7 +24,7 @@
                         {{ $lecturing->time }}
                     </td>
                     <td>{{ $lecturing->lecturer_name }}</td>
-                    <td>{{ $lecturing->description }}</td>
+                    <td>{{ $lecturing->description ?? '' }}</td>
                     <td>{{ $lecturing->book_writer }}</td>
                     <td class="text-center">
                         @can('view', $lecturing)
