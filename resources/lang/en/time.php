@@ -8,7 +8,8 @@ return [
     'week' => 'Week',
     'this_week' => 'This Week',
     'next_week' => 'Next Week',
-    'month' => 'Month',
+    'this_
+    month' => 'Month',
     'all_months' => 'All Months',
     'time' => 'Time',
     'year' => 'Year',

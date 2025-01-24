@@ -31,9 +31,9 @@
                 </div>
             </div>
         </div>
-    
+
+        @forelse ($bankAccounts as $bankAccount)
         <div class="col-lg-4 d-flex">
-            @forelse ($bankAccounts as $bankAccount)
                 <div class="col-md-12 pb-4 d-flex flex-column">
                     <div class="card h-100">
                         <div class="card-header">
@@ -48,20 +48,43 @@
                         @endif
                     </div>
                 </div>
+            </div>        
             @empty
                 {{ __('bank_account.empty') }}
             @endforelse
-        </div>        
     
         <div class="col-lg-4 d-flex justify-content-center">
             <div class="col-md-12 pb-4 d-flex flex-column align-items-center">
-                <div class="card h-100 text-center">
-                    @if (Setting::for($bankAccount)->get('qris_image_path'))
-                        <a href="{{ Storage::url(Setting::for($bankAccount)->get('qris_image_path'))}}">
-                            <img id="bank_account_qris_image_show" class="img-fluid" src="{{ Storage::url(Setting::for($bankAccount)->get('qris_image_path'))}}" alt="QRIS">
-                        </a>
-                    @endif
-                </div>
+                @if (Route::has('lecturings.index'))
+                    <div class="card h-100 text-center">
+                        <div class="col-lg-12">
+                            @livewire('public-home.daily-lecturings', ['date' => today(), 'dayTitle' => 'today'])
+                            {{-- @livewire('public-home.daily-lecturings', ['date' => today()->addDay(), 'dayTitle' => 'tomorrow']) --}}
+                        </div>
+                    </div>
+                @endif
+            </div>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-center">
+            <div class="col-md-12 pb-4 d-flex flex-column align-items-center">
+                @if (Route::has('lecturings.index'))
+                    <div class="card h-100 text-center">
+                        <div class="col-lg-12">
+                            @livewire('public-home.daily-lecturings', ['date' => today(), 'dayTitle' => 'this_week', 'rangeType' => 'pekan_ini'])
+                        </div>
+                    </div>
+                @endif
+            </div>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-center">
+            <div class="col-md-12 pb-4 d-flex flex-column align-items-center">
+                @if (Route::has('lecturings.index'))
+                    <div class="card h-100 text-center">
+                        <div class="col-lg-12">
+                            @livewire('public-home.daily-lecturings', ['date' => today(), 'dayTitle' => 'this_month', 'rangeType' => 'bulan_ini'])
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>    

@@ -32,6 +32,7 @@ if (config('features.lecturings.is_active')) {
         Route::get('/besok', 'PublicScheduleController@tomorrow')->name('tomorrow');
         Route::get('/pekan_ini', 'PublicScheduleController@thisWeek')->name('this_week');
         Route::get('/pekan_depan', 'PublicScheduleController@nextWeek')->name('next_week');
+        Route::get('/bulan_ini', 'PublicScheduleController@thisMonth')->name('this_month');
     });
 }
 

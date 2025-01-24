@@ -41,7 +41,7 @@ return [
 
     // Attributes
     'audience' => 'Audience',
-    'audience_friday' => 'Friday',
+    // 'audience_friday' => 'Friday',
     'audience_public' => 'Public (Muslim and Muslimah)',
     'audience_muslimah' => 'Muslimah Only',
     'audience_tarawih' => 'Shalat Tarawih',

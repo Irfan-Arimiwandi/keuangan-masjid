@@ -8,7 +8,7 @@ return [
     'week' => 'Pekan',
     'this_week' => 'Pekan Ini',
     'next_week' => 'Pekan Depan',
-    'month' => 'Bulan',
+    'this_month' => 'Bulan ini',
     'all_months' => 'Semua Bulan',
     'time' => 'Waktu',
     'year' => 'Tahun',

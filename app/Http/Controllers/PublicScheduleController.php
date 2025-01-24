@@ -42,6 +42,19 @@ class PublicScheduleController extends Controller
 
         return view('public_schedules.index', compact('lecturings', 'audienceCodes'));
     }
+    
+    public function thisMonth(Request $request)
+    {
+        $lecturingQuery = Lecturing::query();
+        $startOfMonth = Carbon::now()->startOfMonth()->format('Y-m-d');
+        $endOfMonth = Carbon::now()->endOfMonth()->format('Y-m-d');
+        $lecturingQuery->whereBetween('date', [$startOfMonth, $endOfMonth]);
+        $lecturingQuery->orderBy('date')->orderBy('start_time');
+        $lecturings = $lecturingQuery->get()->groupBy('audience_code');
+        $audienceCodes = $this->getAudienceCodeList();
+
+        return view('public_schedules.index', compact('lecturings', 'audienceCodes'));
+    }
 
     public function nextWeek(Request $request)
     {

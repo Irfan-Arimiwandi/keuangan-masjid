@@ -24,7 +24,7 @@ class LecturingController extends Controller
         $lecturingQuery->orderBy('date')->orderBy('start_time');
         $lecturings = $lecturingQuery->get()->groupBy('audience_code');
         $regularScheduleAudiences = [
-            Lecturing::AUDIENCE_FRIDAY => __('lecturing.audience_'.Lecturing::AUDIENCE_FRIDAY),
+            // Lecturing::AUDIENCE_FRIDAY => __('lecturing.audience_'.Lecturing::AUDIENCE_FRIDAY),
             Lecturing::AUDIENCE_PUBLIC => __('lecturing.audience_'.Lecturing::AUDIENCE_PUBLIC),
             Lecturing::AUDIENCE_MUSLIMAH => __('lecturing.audience_'.Lecturing::AUDIENCE_MUSLIMAH),
         ];

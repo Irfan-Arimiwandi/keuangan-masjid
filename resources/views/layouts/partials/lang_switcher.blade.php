@@ -1,4 +1,4 @@
-@foreach (['en', 'id'] as $langKey)
+{{-- @foreach (['en', 'id'] as $langKey)
 {!! FormField::formButton(
     [
         'method' => 'patch',
@@ -12,4 +12,4 @@
     ] + (config('app.locale') == $langKey ? ['disabled' => 'disabled'] : []),
     ['lang' => $langKey]
 ) !!}
-@endforeach
+@endforeach --}}
