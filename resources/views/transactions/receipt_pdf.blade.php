@@ -31,9 +31,7 @@
         <tbody>
             <tr>
                 <td style="width:140px;">
-                    @if (Setting::get('masjid_logo_path'))
-                        <img src="{{ Storage::url(Setting::get('masjid_logo_path'))}}" style="width: 75px">
-                    @endif
+                    <img src="{{ public_path('images/logo.png') }}" style="width: 75px" alt="Logo">
                 </td>
                 <td style="width:330px">
                     <div style="width:280px">

@@ -1,4 +1,4 @@
-@extends('layouts.print')
+{{-- @extends('layouts.print')
 
 @section('title')
     {{ __('dashboard.dashboard') }}
@@ -39,4 +39,4 @@
         footer: html_wpFooter;
     }
 </style>
-@endsection
+@endsection --}}

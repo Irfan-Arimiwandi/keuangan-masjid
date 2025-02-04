@@ -38,7 +38,7 @@ return [
     'back' => 'Kembali',
     'cancel' => 'Batal',
     'reset' => 'Reset',
-    'show' => 'Lihat Detail',
+    'show' => 'Detail',
     'detail' => 'Detail',
     'edit' => 'Edit',
     'search' => 'Cari',

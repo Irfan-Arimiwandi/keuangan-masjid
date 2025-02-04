@@ -1,6 +1,9 @@
 <div class="card">
     <table class="table-sm mb-0">
         <tbody>
+            @if ($lecturing->description)
+                <tr><td>{!! config('lecturing.emoji.description') !!} {{ __('lecturing.description') }}</td><td>{{ $lecturing->description }}</td></tr>
+            @endif
             <tr>
                 <td class="col-4 col-sm-3">{!! config('lecturing.emoji.date') !!} {{ __('time.day_name') }}/{{ __('time.date') }}</td>
                 <td><strong>{{ $lecturing->day_name }}</strong>, {{ $lecturing->full_date }}</td>
@@ -21,9 +24,6 @@
             @endif
             @if ($lecturing->title)
                 <tr><td>{!! config('lecturing.emoji.title') !!} {{ __('lecturing.title') }}</td><td>{{ $lecturing->title }}</td></tr>
-            @endif
-            @if ($lecturing->description)
-                <tr><td>{!! config('lecturing.emoji.description') !!} {{ __('lecturing.description') }}</td><td>{{ $lecturing->description }}</td></tr>
             @endif
         </tbody>
     </table>

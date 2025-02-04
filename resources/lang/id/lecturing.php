@@ -14,17 +14,17 @@ return [
     'detail_for_friday' => 'Detail Jadwal Khatib',
     'not_found' => 'Jadwal tidak ditemukan',
     'empty' => 'Belum ada Jadwal',
-    'friday_empty' => 'Belum ada Jadwal Khatib',
-    'public_empty' => 'Belum ada Jadwal Umum',
-    'muslimah_empty' => 'Belum ada Jadwal Muslimah',
-    'tarawih_empty' => 'Belum ada Jadwal Tarawih',
+    'friday_empty' => 'Belum ada Jadwal',
+    'public_empty' => 'Belum ada Jadwal',
+    'muslimah_empty' => 'Belum ada Jadwal',
+    'tarawih_empty' => 'Belum ada Jadwal',
     'count' => 'Input Jadwal',
     'back_to_show' => 'Kembali ke detail Jadwal',
     'back_to_index' => 'Kembali ke daftar Jadwal',
 
     // Actions
     'create' => 'Input Jadwal',
-    'create_for_friday' => 'Input Jadwal Khatib',
+    'create_for_friday' => 'Input Jadwal',
     'created' => 'Input Jadwal baru telah berhasil.',
     'duplicate' => 'Duplikat Jadwal',
     'show' => 'Lihat Detail Jadwal',
@@ -68,4 +68,5 @@ return [
     'link1' => 'Progress',
     'link2' => 'Di Tunda',
     'link3' => 'Di Batalkan',
+    'link4' => 'Menunggu',
 ];

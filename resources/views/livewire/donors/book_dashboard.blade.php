@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-4 text-right mb-2">
-                        <span class="text-muted">({{ __('report.in_thousand') }} {{ config('money.currency_text') }})</span>
+                        {{-- <span class="text-muted">({{ __('report.in_thousand') }} {{ config('money.currency_text') }})</span> --}}
                     </div>
                 </div>
 

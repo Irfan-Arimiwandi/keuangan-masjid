@@ -1,6 +1,6 @@
-<div class="d-flex order-lg-0">
+<div class="d-flex order-lg-0" class="bg-primary">
     <div class="dropdown">
-        <a href="#" class="nav-link dropdown-toggle px-0 leading-none" data-toggle="dropdown">
+        <a href="#" class="nav-link dropdown-toggle px-0 leading-none btn btn-secondary" data-toggle="dropdown">
             <span class="ml-2 d-lg-block">
                 <span class="text-default">{{ auth()->activeBook()->name }}</span>
                 <small class="text-muted d-block mt-1">

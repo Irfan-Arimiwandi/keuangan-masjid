@@ -108,10 +108,10 @@ return [
 
     'lecturing' => [
         'time_text' => [
-            'unique' => 'Sudah ada jadwal pengajian :time_text pada tanggal yang dipilih.',
+            'unique' => 'Sudah ada jadwal :time_text pada tanggal yang dipilih.',
         ],
         'start_time' => [
-            'unique' => 'Sudah ada jadwal pengajian jam :start_time pada tanggal yang dipilih.',
+            'unique' => 'Sudah ada jadwal jam :start_time pada tanggal yang dipilih.',
         ],
     ],
 

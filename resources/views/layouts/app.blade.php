@@ -24,8 +24,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="icon" href="{{ url('favicon.ico') }}" type="image/x-icon"/>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url('favicon.ico') }}" />
+    <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/x-icon"/>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo.ico') }}" />
+
     @livewireStyles
     @yield('styles')
 </head>

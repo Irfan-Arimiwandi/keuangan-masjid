@@ -37,7 +37,7 @@ class UpdateRequest extends FormRequest
                 })->ignore($this->route('lecturing')),
             ],
             'lecturer_name' => ['required', 'max:60'],
-            'imam_name' => [$isImamRequired ? 'required' : 'nullable', 'max:60'],
+            // 'imam_name' => [$isImamRequired ? 'required' : 'nullable', 'max:60'],
             'muadzin_name' => ['nullable', 'max:60'],
             'title' => ['nullable', 'max:60'],
             'book_title' => ['nullable', 'max:60'],

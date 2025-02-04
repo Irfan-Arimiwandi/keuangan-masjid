@@ -3,21 +3,25 @@
 @section('title', __('app.welcome'))
 
 @section('content')
-    <div class="jumbotron p-4 mb-0 p-md-5 text-dark rounded bg-lightgray">
-        <div class="col-md-6 px-0">
-            <h2 class="font-italic">
-                {{-- @yield('title'),<br> {{ Setting::get('masjid_name', config('masjid.name')) }} --}}
-            </h2>
+<div class="jumbotron p-4 mb-0 p-md-5 text-dark rounded bg-lightgray">
+    <div class="px-0 row">
+        <div class="col-md-3">
             <p class="lead mb-0">
                 <a class="btn btn-lg btn-success mr-2" href="{{ route('public_reports.index') }}"
                     role="button">{{ __('report.view_report') }}</a>
-                {{-- @if (Route::has('lecturings.index'))
-                    <a class="btn btn-lg btn-info" href="{{ route('public_schedules.index') }}"
-                        role="button">{{ __('lecturing.lecturing') }}</a>
-                @endif --}}
+            </p>
+        </div>
+        <div class="col-md-9">
+            <p class="font-weight-bold">
+                Laporan keuangan Masjid Jami Alakhyar ini adalah bentuk dari transparansi kepada jamaah, laporan ini kami perbarui setiap minggu nya, jika terdapat kesalahan atau koreksi bisa menghubungi kami <br>
+                <br>
+                Bendahara <br>
+                Ahmad Husni
             </p>
         </div>
     </div>
+</div>
+
     <div class="row justify-content-center mt-5">
         <div class="col-lg-4 d-flex">
             <div class="col-md-12 pb-4 d-flex flex-column">

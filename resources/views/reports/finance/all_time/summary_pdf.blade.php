@@ -10,7 +10,7 @@
         @if (isset(auth()->activeBook()->report_titles['finance_summary']))
             {{ auth()->activeBook()->report_titles['finance_summary'] }}
         @else
-            {{ __('report.all_time') }}
+            {{ __('report.all_time') }} 
         @endif
     </h2>
 </htmlpageheader>

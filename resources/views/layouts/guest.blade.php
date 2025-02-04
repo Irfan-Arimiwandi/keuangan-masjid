@@ -19,53 +19,53 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/x-icon"/>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
     @yield('styles')
 </head>
 <body>
-    <div class="container-fluid">
-        <header class="py-5 text-center">
-            <div class="mb-3">
-            <img src="{{ asset('images/logo.png') }}" style="width: 150px">
-            </div>
-            <a class="h1 text-dark" href="{{ url('/') }}">{{ Setting::get('masjid_name', config('masjid.name')) }}</a>
-            @if (Setting::get('masjid_address'))
-            <div class="mt-4">
-            <p class="mb-1">{!! nl2br(htmlentities(Setting::get('masjid_address'))) !!}</p>
-            <p class="mb-0">{{ __('Website:') }} <a href="{{ url('/') }}" class="text-primary">{{ url('/') }}</a></p>
-            <p class="mb-0">{{ __('Laporan Keuangan:') }} <a href="{{ route('public_reports.index') }}" class="text-primary">{{ __('Klik di sini') }}</a></p>
-            </div>
-            @endif
-            <div class="mt-4">
-            <p class="mb-0">{{ __('Untuk informasi lebih lanjut mengenai laporan keuangan, silakan kunjungi halaman laporan keuangan kami.') }}</p>
-            </div>
-        </header>
-    </div>
+        <div class="container-fluid text-center">
+            <header class="d-flex flex-column flex-md-row align-items-right justify-content-center py-5 text-center">
+                <div class="mb-3 mb-md-0">
+                    <img src="{{ asset('images/logo.png') }}" style="width: 100px">
+                </div>
+                <div class="ml-md-3">
+                    <a class="h3 text-dark" href="{{ url('/') }}">{{ Setting::get('masjid_name', config('masjid.name')) }}</a>
+                    @if (Setting::get('masjid_address'))
+                    <div class="mt-4">
+                        <p class="mb-1">Jalan Benda Raya, Gg. Masjid No.99 11, RT 11/RW 04, Cilandak Timur <br> Ps. Minggu, Kota Jakarta Selatan, DKI Jakarta 12560, Indonesia</p>
+                    </div>
+                    @endif
+                    <div class="mt-4">
+                        <h5 class="mb-0">{{ __('LAPORAN KEUANGAN') }}</h5>
+                    </div>
+                </div>
+            </header>
+        </div>
     <div class="navbar-light bg-white shadow-sm mb-4">
-        <div class="container-fluid">
+        <div class="container-fluid bg-green">
             <div class="row">
                 <div class="offset-0 offset-lg-1 offset-xl-2 col-12 col-lg-10 col-xl-8">
                     <div class="py-1">
                         <nav class="nav d-flex justify-content-between">
-                            <a class="py-2 px-1 {{ in_array(Request::segment(1), [null]) ? 'text-primary strong' : 'text-dark' }}" href="{{ url('/') }}">
+                            <a class="py-2 px-1 {{ in_array(Request::segment(1), [null]) ? 'text-primary strong' : 'text-white' }}" href="{{ url('/') }}">
                                 <i class="fe fe-home"></i> {{ __('app.home') }}
                             </a>
-                            <a class="py-2 px-1 {{ in_array(Request::segment(1), ['laporan-kas']) ? 'text-primary strong' : 'text-dark' }}" href="{{ route('public_reports.index') }}">
+                            <a class="py-2 px-1 {{ in_array(Request::segment(1), ['laporan-kas']) ? 'text-primary strong' : 'text-white' }}" href="{{ route('public_reports.index') }}">
                                 <i class="fe fe-layout"></i> {{ __('report.report') }}
                             </a>
-                            <a class="py-2 px-1 {{ in_array(Request::segment(1), ['donasi']) ? 'text-primary strong' : 'text-dark' }}" href="{{ route('public.donate') }}">
+                            <a class="py-2 px-1 {{ in_array(Request::segment(1), ['donasi']) ? 'text-primary strong' : 'text-white' }}" href="{{ route('public.donate') }}">
                                 <i class="fe fe-pocket"></i> {{ __('app.donate') }}
                             </a>
                             @if (Route::has('public_schedules.index'))
-                                <a class="py-2 px-1 {{ in_array(Request::segment(1), ['jadwal']) ? 'text-primary strong' : 'text-dark' }}" href="{{ route('public_schedules.index') }}">
+                                <a class="py-2 px-1 {{ in_array(Request::segment(1), ['jadwal']) ? 'text-primary strong' : 'text-white' }}" href="{{ route('public_schedules.index') }}">
                                     <i class="fe fe-calendar"></i> {{ __('lecturing.public_schedule') }}
                                 </a>
                             @endif
                             @auth
-                            <a class="py-2 px-1 text-dark" href="{{ route('home') }}"><i class="fe fe-user"></i> {{ auth()->user()->name }}</a>
+                            <a class="py-2 px-1 text-white" href="{{ route('home') }}"><i class="fe fe-user"></i> {{ auth()->user()->name }}</a>
                             @else
-                            <a class="py-2 px-1 text-dark" href="{{ route('login') }}"><i class="fe fe-user"></i> {{ __('auth.login') }}</a>
+                            <a class="py-2 px-1 text-white" href="{{ route('login') }}"><i class="fe fe-user"></i> {{ __('auth.login') }}</a>
                             @endauth
                         </nav>
                     </div>

@@ -31,9 +31,9 @@
                             'class' => 'date-select',
                         ]) !!}
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6"><div class="col-6">{!! FormField::text('start_time', ['required' => true, 'label' => __('lecturing.start_time'), 'placeholder' => '19:00']) !!}</div>
                         <div class="row">
-                            <div class="col-6">{!! FormField::text('start_time', ['required' => true, 'label' => __('lecturing.start_time'), 'placeholder' => '19:00']) !!}</div>
+                            
                             <div class="col-6">{!! FormField::text('end_time', ['label' => __('lecturing.end_time'), 'placeholder' => '19:40']) !!}</div>
                             <div class="col-12">{!! FormField::text('time_text', ['label' => __('lecturing.time_text'), 'placeholder' => __('lecturing.time_text_placeholder')]) !!}</div>
                             <div class="col-12">{!! FormField::text('lecturer_name', ['required' => true, 'label' => __('lecturing.lecturer_name')]) !!}</div>
@@ -48,9 +48,10 @@
                 {{-- {!! FormField::text('book_writer', ['label' => __('lecturing.book_writer')]) !!} --}}
                 {!! FormField::select('book_link', 
                 [
-                    'link1' => __('lecturing.link1'),
-                    'link2' => __('lecturing.link2'),
-                    'link3' => __('lecturing.link3'),
+                    'Progress' => __('lecturing.link1'),
+                    'Di Bunda' => __('lecturing.link2'),
+                    'Di Batalkan' => __('lecturing.link3'),
+                    'Menunggu' => __('lecturing.link4'),
                 ], 
                 [
                     'label' => __('lecturing.book_link')

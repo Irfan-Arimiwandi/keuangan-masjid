@@ -8,10 +8,10 @@
     <h1 class="page-title">{{ __('app.donate') }} {{ Setting::get('masjid_name', config('masjid.name')) }}</h1>
 </div>
 
-<div class="row justify-content-center">
+<div class="row justify-content-center equal-height">
     @forelse ($bankAccounts as $bankAccount)
-        <div class="col-md-6 pb-4">
-            <div class="card">
+        <div class="col-md-4 pb-4 d-flex">
+            <div class="card flex-grow-1">
                 <div class="card-header">
                     <h3 class="card-title">{{ $bankAccount->name }}</h3>
                 </div>
@@ -24,16 +24,20 @@
                 @endif
             </div>
         </div>
-        @if (Setting::for($bankAccount)->get('qris_image_path'))
-            <div class="col-md-6 pb-4">
-                <a href="{{ Storage::url(Setting::for($bankAccount)->get('qris_image_path'))}}">
-                    <img id="bank_account_qris_image_show" class="img-fluid" src="{{ Storage::url(Setting::for($bankAccount)->get('qris_image_path'))}}" alt="QRIS">
-                </a>
+        <div class="col-md-4 pb-4 d-flex">
+            <div class="card flex-grow-1">
+                @if (Setting::for($bankAccount)->get('qris_image_path'))
+                <div class="col-md-6 pb-4">
+                    <a href="{{ Storage::url(Setting::for($bankAccount)->get('qris_image_path'))}}">
+                        <img id="bank_account_qris_image_show" class="img-fluid" src="{{ Storage::url(Setting::for($bankAccount)->get('qris_image_path'))}}" alt="QRIS">
+                    </a>
+                </div>
+                @endif
             </div>
-        @endif
-
+        </div>
     @empty
         {{ __('bank_account.empty') }}
     @endforelse
 </div>
+
 @endsection
